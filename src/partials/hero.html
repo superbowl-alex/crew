@@ -24,10 +24,19 @@
             
         </div>
         </div>
-        <div class="text__thumb--lg">
-            <p class="hero__text hero__text--about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et</p>
-            <button class="hero__button" type="button">        
+        <div class="text__container--lg">
+            <div class="text__thumb--lg" overflow-on>
+                <p class="hero__text hero__text--about " data-menu-hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut
+                    labore et</p>
+                    <div class="descr" data-menu>
+                        <h2 class="descr__title">Lorem ipsum</h2>
+                        <p class="descr__text hero__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ad ratione placeat quis voluptates nam tempora et aperiam, illum quo perferendis id asperiores incidunt, nulla pariatur quasi? Reiciendis dicta asperiores modi, maxime rem saepe laboriosam nemo perspiciatis laudantium sequi aperiam nulla pariatur voluptatem quidem illum officiis cumque? Adipisci assumenda voluptate facilis fugiat libero 
+                        </p>
+                    </div>
+            </div>            
+            <button class="hero__button" type="button" aria-label="learn more button"  data-menu-button aria-expanded="false">        
             <svg class="hero__icon">        
                 <use href="./images/icons.svg#icon-arrow-right2"></use>
             </svg>
@@ -88,3 +97,22 @@
         <div class="circle"></div>
     </div>
 </section>
+
+<script>
+    (() => {
+            const menuBtnRef = document.querySelector("[data-menu-button]");
+            const modalwin = document.querySelector("[data-menu]");
+            const herotxthid = document.querySelector("[data-menu-hidden]");
+            const txtovrfl = document.querySelector("[overflow-on]");
+
+            menuBtnRef.addEventListener("click", () => {
+                // const expanded =
+                //     menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+                // menuBtnRef.classList.toggle("is-active");
+                // menuBtnRef.setAttribute("aria-expanded", !expanded);
+                modalwin.classList.toggle("is-open");
+                herotxthid.classList.toggle("is-hidden");
+                txtovrfl.classList.toggle("overflow-on");
+            });
+        })();
+</script>
