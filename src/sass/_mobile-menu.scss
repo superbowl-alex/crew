@@ -9,7 +9,7 @@
     margin: 0;
 }
 .backdrop-mobile{
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100vw;
     height: 100vh;
@@ -17,6 +17,7 @@
     z-index: 1000;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
         transform: translateX(0);
+        
         @media screen and (min-width:1200px) {
                 display: none;
             }
