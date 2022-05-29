@@ -1,5 +1,5 @@
 const mobileMenuItemsEL = document.querySelector(".mobile-menu-list");
-const mobileMenuEL = document.querySelector(".mobile-menu");
+const mobileMenuEL = document.querySelector(".backdrop-mobile");
 const openMenuBtn = document.querySelector(".menu-btn-open");
 const closeMenuBtn = document.querySelector(".mobile-btn-close");
 const headerBuyBtn = document.querySelector(".header__buy-button");
