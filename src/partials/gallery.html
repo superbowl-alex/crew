@@ -1,0 +1,32 @@
+<section id="gallery" class="section gallery">
+  <div class="container">
+   
+    <h2 class="visually-hidden">gallery</h2>
+    <picture>
+      <source
+        srcset="
+          ./images/gallery-img-desktop.jpg 1x,
+          ./images/gallery-img-desktop@2x.jpg 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="
+          ./images/gallery-img-tablet.jpg    1x,
+          ./images/gallery-img-tablet@2x.jpg 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="./images/gallery-img-mob.jpg 1x, ./images/gallery-img-mob@2x.jpg 2x"
+        media="(max-width: 767px)"
+      />
+      <img
+        class="gallery__image"
+        src="./images/gallery-img-mob.jpg"
+        alt="gallery"
+      />
+    </picture>
+   
+  </div>
+</section>

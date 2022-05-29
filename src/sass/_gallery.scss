@@ -1,0 +1,11 @@
+.gallery__image {
+   margin-left: auto;
+   margin-right: auto;
+}
+.gallery{
+   background: linear-gradient(
+    to bottom,
+    var(--secondary-light-background) 30%,
+    #ffff 70%
+  );
+}

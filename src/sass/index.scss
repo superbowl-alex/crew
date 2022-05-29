@@ -1,13 +1,10 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
-
 @import './base/reset';
 @import './base/button';
 
 @import './base/hidden';
 
+// ---------------------------------------
+@import './common';
 @import './utils/vars';
 @import './utils/base';
 @import './section';

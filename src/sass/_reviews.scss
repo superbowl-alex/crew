@@ -1,0 +1,113 @@
+.customer__image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 85px;
+    height: 85px;
+
+}
+
+
+
+.home {
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: -webkit-fill-available;
+    fill:  #C7133E;
+}
+
+.customer{
+    width: 320px;
+}
+
+
+
+
+.customer__summary-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 186%;
+    text-align: center;
+    margin-top: 0px;
+}
+
+
+
+.customer__summary-background
+{
+    position: relative;
+        width: 280px;
+        padding-top: 28px;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        background-color: #fafafa;
+        padding-top: 13px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 1px;
+    }
+
+
+.customer__summary-text::before {
+    content:" ❞ ";
+    
+    height: 0;
+    position: absolute;
+    top: -30px;
+    left: 67px;
+    font-size: 5.2em;
+    color: rgba(225, 225, 225, 0.776);
+}
+
+
+// .customer__summary-text::after{
+//     position: absolute;
+// content: url(../images/icons.svg#dots);
+//     width: 54px;
+//     height: 40px;
+//     background-color: rgba(93, 239, 239, 0.384);
+//     background-image: url(../images/icons.svg#dots);
+// }
+
+.customer__summary-text{
+  
+        font-weight: bold;
+        padding-right: 15px;
+        padding-left: 8px;
+        font-size: 12px;
+        line-height: 2.55;
+        text-align: center;
+        
+
+        background-image: -webkit-repeating-linear-gradient(top,
+                transparent 0px,
+                transparent 29px,
+                #e1e1e1 29px,
+                transparent 30px);
+        background-image: -moz-repeating-linear-gradient(top,
+                transparent 0px,
+                transparent 29px,
+                #e1e1e1 29px,
+                transparent 30px);
+        background-image: -ms-repeating-linear-gradient(top,
+                transparent 0px,
+                transparent 29px,
+                #e1e1e1 29px,
+                transparent 30px);
+        background-image: -o-repeating-linear-gradient(top,
+                transparent 0px,
+                transparent 29px,
+                #e1e1e1 29px,
+                transparent 30px);
+        background-image: repeating-linear-gradient(top,
+                transparent 0px,
+                transparent 30px,
+                #e1e1e1 30px,
+                transparent 31px);
+    }
+
+

@@ -1,0 +1,60 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  background-color: var(--accent-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  @media screen and (min-width: 480px) {
+    height: 610px;
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 581px;
+    width: 528px;
+  }
+}
+
+.modal_title {
+  @extend .title;
+  font-size: 15px;
+}
+
+.modal_sub-title {
+  @extend .pre-title;
+  font-size: 10px;
+}
+
+.signup-form_item {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.signup-form_input {
+  display: block;
+  margin-top: 5px;
+  width: 100%;
+}
