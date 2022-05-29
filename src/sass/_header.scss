@@ -139,9 +139,9 @@
         margin-right: 35px;
     }
 
-    &__nav-item:first-child > &__nav-link {
-        color: var(--title-color);
-    }
+    // &__nav-item:first-child > &__nav-link {
+    //     color: var(--title-color);
+    // }
 
     &__nav-link {
         display: inline-block;
@@ -189,7 +189,7 @@
     display: none;
 }
 
-.current-color {
+.js-current-color {
     color: var(--title-color);
 }
 
