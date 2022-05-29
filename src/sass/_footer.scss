@@ -172,6 +172,34 @@
         right: 16px;
     }
 }
+.footer__border{
+    border-top: 1px solid #E1E1E1;
+    background-color: var(--secondary-light-background);
+}
+.footer__copy{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+
+
+    text-align: center;
+    color: #907E82;
+    padding-top: 16px;
+    width: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width:768px){
+        line-height:26px;
+        letter-spacing: 0.02em;
+        width: 276px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+    }
+}
+
 
 
 
