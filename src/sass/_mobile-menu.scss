@@ -8,6 +8,13 @@
 .item {
     margin: 0;
 }
+.backdrop-mobile{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(240, 240, 240);
+}
 .mobile-menu{
     position: fixed;
     top: 0;
