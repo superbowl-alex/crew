@@ -12,7 +12,7 @@
         padding-top: 32px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
         padding-top: 37px;
     }
 
@@ -26,7 +26,8 @@
         display: block;
     }
 
-    &__logo-link:hover &__logo {
+    &__logo-link:hover &__logo,
+    &__logo-link:focus &__logo {
         transform: scale(1.03);
     }
 
@@ -49,12 +50,13 @@
             margin-left: auto;
         }
 
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1280px) {
             display: none;
         }
     }
 
-    &__button:hover &__button-line {
+    &__button:hover &__button-line,
+    &__button:focus &__button-line {
         transform: scale(1.25);
     }
 
@@ -111,7 +113,8 @@
         height: 10.5px;  
     }
 
-    &__buy-button:hover {
+    &__buy-button:hover,
+    &__buy-button:focus {
         background-color: #ECEBEB;
         transform: scale(1.05);
         
@@ -121,7 +124,7 @@
     &__nav {
         display: none;
 
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1280px) {
             display: block;
             margin: auto;
         }
@@ -176,7 +179,7 @@
         padding-bottom: 10px;
     }
     
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
         padding-top: 12px;
         padding-bottom: 12px;
     }
