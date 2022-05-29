@@ -1,0 +1,33 @@
+.contact-card {
+   border: 1px solid rgb(209, 28, 28);
+   width: 100%;
+   background: #ffffff;
+   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+   border-radius: 24px;
+
+}
+
+.cotatact__title {
+   font-size: 12px;
+line-height: 186%;
+/* or 22px */
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.04em;
+
+color: #FFFFFF;
+}
+.title__color {
+   background: var(--dark-product2-background);
+   border-radius: 4px;
+
+}
+.contact-list {
+   & li{
+      border: 1px solid #4510c0;
+   }
+}
+.link {
+}
