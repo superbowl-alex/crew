@@ -3,7 +3,7 @@
     openMenuBtn: document.querySelector(".menu-btn-open"),
     closeMenuBtn: document.querySelector(".mobile-btn-close"),
     headerBuyBtn: document.querySelector(".header__buy-button"),
-    menu: document.querySelector(".mobile-menu"),
+    menu: document.querySelector(".backdrop-mobile"),
     body: document.querySelector(".body"),
   };
   
