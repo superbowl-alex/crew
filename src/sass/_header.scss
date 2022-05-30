@@ -157,7 +157,7 @@
     &__nav-link:hover,
     &__nav-link:focus {
         color: var(--title-color);
-        transform: scale(1.1);
+        transform: scale(1.12);
     }
 }
 
@@ -179,6 +179,8 @@
     @media screen and (min-width: 768px) {
         padding-top: 10px;
         padding-bottom: 10px;
+
+        background-color: rgb(255, 184, 202, 0.8);
     }
     
     @media screen and (min-width: 1280px) {
