@@ -391,6 +391,11 @@ p {
   bottom: 0;
   right: 10%;
 
+  animation-name: fall;
+  animation-duration: 1500ms;
+  animation-iteration-count: 1;
+  animation-delay: 1000ms;
+
   @include mq(tablet) {
     right: 39%;
   }
@@ -452,7 +457,7 @@ p {
     animation-name: rotateY;
     animation-duration: 1500ms;
     animation-iteration-count: 1;
-    animation-delay: 500ms;
+    animation-delay: 1500ms;
   }
 
   @include mq(tablet) {
@@ -492,5 +497,20 @@ p {
 
   100% {
     transform: perspective(300px) rotateY(180deg);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(0, -100%);
+  }
+  33% {
+    transform: translate(0, 0);
+  }
+  66% {
+    transform: translate(0, -10%);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
