@@ -5,10 +5,10 @@
             <nav>
                 <ul class="hero__list list">
                     <li class="hero__item">
-                        <a href="#products" class="hero__link link">Products</a>
+                        <a href="#products" class="hero__link link btn__animation">Products</a>
                     </li>
                     <li class="hero__item">
-                        <a href="#about" class="hero__link link">How it&#39;s made?</a>
+                        <a href="#about" class="hero__link link btn__animation">How it&#39;s made?</a>
                     </li>
                 </ul>
             </nav>              
@@ -36,7 +36,7 @@
                         </p>
                     </div>
             </div>            
-            <button class="hero__button" type="button" aria-label="learn more button"  data-menu-button aria-expanded="false">        
+            <button class="hero__button btn__animation" type="button" aria-label="learn more button"  data-menu-button aria-expanded="false">        
             <svg class="hero__icon">        
                 <use href="./images/icons.svg#icon-arrow-right2"></use>
             </svg>
@@ -47,7 +47,7 @@
             <!-- Desktop -->
             <source srcset="./images/hero-ice-cream-desktop.png        1x,
                             ./images/hero-ice-cream-desktop@2x.png     2x"
-                            media="(min-width: 1200px)"
+                            media="(min-width: 1280px)"
                             type="image/png"/>
             <!-- Tablet -->
             <source srcset="./images/hero-ice-cream-tablet.png         1x,
@@ -67,7 +67,7 @@
             <!-- Desktop -->
             <source srcset="./images/hero-milk-desktop.png        1x,
                             ./images/hero-milk-desktop@2x.png     2x" 
-                            media="(min-width: 1200px)"
+                            media="(min-width: 1280px)"
                             type="image/png"/>
 
             <!-- Tablet -->
@@ -84,7 +84,7 @@
             <!-- Desktop -->
             <source srcset="./images/hero-girl-desktop.png        1x,
                             ./images/hero-girl-desktop@2x.png    2x" 
-                            media="(min-width: 1200px)"
+                            media="(min-width: 1280px)"
                             type="image/png" />
             <!-- Tablet -->
             <source srcset="./images/hero-girl-tablet.png         1x,
@@ -98,21 +98,4 @@
     </div>
 </section>
 
-<script>
-    (() => {
-            const menuBtnRef = document.querySelector("[data-menu-button]");
-            const modalwin = document.querySelector("[data-menu]");
-            const herotxthid = document.querySelector("[data-menu-hidden]");
-            const txtovrfl = document.querySelector("[overflow-on]");
-
-            menuBtnRef.addEventListener("click", () => {
-                // const expanded =
-                //     menuBtnRef.getAttribute("aria-expanded") === "true" || false;
-                // menuBtnRef.classList.toggle("is-active");
-                // menuBtnRef.setAttribute("aria-expanded", !expanded);
-                modalwin.classList.toggle("is-open");
-                herotxthid.classList.toggle("is-hidden");
-                txtovrfl.classList.toggle("overflow-on");
-            });
-        })();
-</script>
+<script src="./JS/hero.js"></script>
