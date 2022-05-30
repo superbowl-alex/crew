@@ -1,11 +1,37 @@
 .about {
   background-color: var(--secondary-light-background);
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (max-width: 767.98px) {
+    background-image: url(../images/about-bg-mob.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      & {
+        background-image: url(../images/about-bg-mob@2x.png);
+      }
+    }
+    background-repeat: no-repeat;
+    background-position-y: 574px;
+    @media screen and (min-width: 345px) {
+      background-position-y: 536px;
+    }
+    @media screen and (min-width: 480px) {
+      background-position-x: calc((100vw - 480px) / 2);
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     padding-top: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/about-bg-desktop.png);
+    background-position: center top 255px;
+    background-repeat: no-repeat;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      & {
+        background-image: url(../images/about-bg-desktop@2x.png);
+      }
+    }
   }
 }
 .about--container {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -15,11 +41,13 @@
   @media screen and (min-width: 768px) {
     margin-bottom: 40px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     margin-bottom: 60px;
   }
 }
 .about__wrap-main {
+  position: relative;
+  z-index: 2;
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
@@ -33,7 +61,7 @@
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     margin-right: 139px;
   }
 }
@@ -48,7 +76,7 @@
     font-size: 14px;
     line-height: 1.76;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     width: 463px;
     font-size: 16px;
   }
@@ -62,7 +90,7 @@
   @media screen and (min-width: 768px) {
     margin-top: 25px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     margin-top: 32px;
     font-size: 14px;
     line-height: 1.94;

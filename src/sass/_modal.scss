@@ -7,6 +7,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   overflow-y: scroll;
+  z-index: 10000;
 }
 
 .backdrop.is-hidden {
@@ -16,45 +17,201 @@
 
 .modal {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   width: 100vw;
-  height: 100vh;
-  padding: 40px;
+  height: fit-content;
+  max-width: 480px;
+  padding: 60px 40px 40px 40px;
   background-color: var(--accent-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+    0px 2px 1px rgba(0, 0, 0, 0.2), 0px 2px 2px rgb(0 0 0 / 25%);
+  border-radius: 8px;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media screen and (min-width: 480px) {
-    height: 610px;
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  @media screen and (min-width: 767px) {
+    height: fit-content;
     width: 450px;
   }
+}
 
-  @media screen and (min-width: 1200px) {
-    height: 581px;
-    width: 528px;
+.btn_close-modal {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+}
+
+.modal-close {
+  fill: var(--light-txt-color);
+  transition: fill 550ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: var(--title-color);
   }
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
 }
 
 .modal_title {
-  @extend .title;
-  font-size: 15px;
+  margin-bottom: 10px;
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 0.965;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: var(--title-color);
+  text-align: center;
 }
 
 .modal_sub-title {
-  @extend .pre-title;
-  font-size: 10px;
+  margin-bottom: 18px;
+  color: var(--light-txt-color);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  text-align: center;
 }
 
 .signup-form_item {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-.signup-form_input {
+.signup_label,
+.textarea-label {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--light-txt-color);
+}
+
+.signup_title,
+.checkboxes-title,
+.textarea-title {
+  @extend .modal_sub-title;
   display: block;
+  font-weight: 700;
+  text-transform: none;
+  text-align: start;
+  margin-bottom: 0;
+}
+
+.signup_input {
+  display: block;
+  box-sizing: border-box;
+  color: var(--title-color);
+  border: transparent;
+  outline: transparent;
+  border-radius: 5px;
   margin-top: 5px;
+  padding: 0 10px;
   width: 100%;
+  height: 35px;
+
+  &:focus {
+    border: 2px solid var(--title-color);
+  }
+}
+
+.choose-form-title {
+  @extend .modal_sub-title;
+  font-family: 'Titan One';
+  text-transform: none;
+  font-size: 15px;
+  color: var(--title-color);
+  margin-right: 15px;
+}
+
+.checkboxes_item {
+  display: block;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.amount-input {
+  box-sizing: border-box;
+  background-color: var(--light-txt-color);
+  color: var(--title-color);
+  border: transparent;
+  outline: transparent;
+  border-radius: 5px;
+  margin-top: 5px;
+  width: 45px;
+  height: 30px;
+
+  &:focus {
+    border: 2px solid var(--title-color);
+  }
+}
+
+.textarea {
+  display: block;
+  box-sizing: border-box;
+  color: var(--title-color);
+  border: transparent;
+  outline: transparent;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  resize: none;
+
+  &:focus {
+    border: 2px solid var(--title-color);
+  }
+}
+
+.submit-btn {
+  height: 40px;
+  width: 150px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--light-txt-color);
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  text-decoration: none;
+  border: none;
+  background-color: var(--light-txt-color);
+  color: var(--title-color);
+  transition: color 550ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 550ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--title-color);
+    color: var(--light-txt-color);
+    transform: scale(115%);
+    box-shadow: 0px 2px 2px rgb(212 20 67 / 75%);
+  }
 }

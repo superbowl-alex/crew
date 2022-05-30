@@ -6,6 +6,9 @@
     <title>Ice Cream</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
       rel="stylesheet"
@@ -28,7 +31,6 @@
     <include src="./partials/reviews.html"></include>
     <include src="./partials/contacts.html"></include>
     <include src="./partials/footer.html"></include>
-    <include src="./partials/modal.html"></include>
     <include src="./partials/mobile-menu.html"></include>
     <include src="./partials/modal.html"></include>
 
@@ -46,9 +48,20 @@
 
     <!-- скрипт который добавлят класс с цветом на елемент навигации, на который нажали  -->
     <script src="../js/header-nav.js" type="module"></script>
-    
+    <!-- відкривання та закривання модалки -->
     <script src="../js/modal.js"></script>
-    <!--Скрипт для Swiper-->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>
