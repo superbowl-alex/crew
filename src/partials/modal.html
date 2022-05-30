@@ -1,12 +1,12 @@
-<div class="backdrop is-hidden" data-modal>
+<div class="modal-backdrop is-hidden">
   <div class="modal">
-    <button class="btn_close-modal" type="button" data-modal-close>
+    <button class="btn_close-modal" type="button">
       <svg class="modal-close" width="40px" height="40px">
         <use href="images/icons.svg#icon-close_40px"></use>
       </svg>
     </button>
     <p class="modal_title">Your life's gonna get sweet!!!</p>
-    <p class="modal_sub-title">(!visit nearby store to retrive your order!)</p>
+    <p class="modal_sub-title">visit nearby store to retrive your order</p>
     <form name="signup-form" class="signup-form" autocomplete="off">
       <div class="signup-form_item">
         <label class="signup_label">
@@ -27,33 +27,56 @@
         </label>
       </div>
       <div class="signup-form_item">
-        <p class="checkboxes-title">Products you want</p>
-        <div class="checkboxes_item">
-          <label class="choose-form-label">
-            <input class="checkbox" type="checkbox" name="products" value="ice-cream" />
-            <span class="choose-form-title">Ice cream</span>
-          </label>
-          <label class="amount-label">
-            <input class="amount-input" type="number" name="ice-cream-amount" value="0" max="10" />
-          </label>
-        </div>
-        <div class="checkboxes_item">
-          <label class="choose-form-label">
-            <input class="checkbox" type="checkbox" name="products" value="ice coffee" />
-            <span class="choose-form-title">Ice coffee</span>
-          </label>
-          <label class="amount-label">
-            <input class="amount-input" type="number" name="ice-coffee-amount" value="0" max="10" />
-          </label>
-        </div>
-        <div class="checkboxes_item">
-          <label class="choose-form-label">
-            <input class="checkbox" type="checkbox" name="products" value="milkshake" />
-            <span class="choose-form-title">Milkshake</span>
-          </label>
-          <label class="amount-label">
-            <input class="amount-input" type="number" name="milkshake-amount" value="0" max="10" />
-          </label>
+        <p class="checkboxes_title">Products you want</p>
+        <div class="checkboxes">
+          <div class="checkboxes_item">
+            <label class="choose-form-label">
+              <input class="checkbox" type="checkbox" name="products" value="ice-cream" />
+              <span class="choose-form-title">Ice cream</span>
+              <span class="checkbox-icon"></span>
+            </label>
+            <label class="amount-label">
+              <input
+                class="amount-input"
+                type="number"
+                name="ice-cream-amount"
+                value="0"
+                max="10"
+              />
+            </label>
+          </div>
+          <div class="checkboxes_item">
+            <label class="choose-form-label">
+              <input class="checkbox" type="checkbox" name="products" value="ice coffee" />
+              <span class="choose-form-title">Ice coffee</span>
+              <span class="checkbox-icon"></span>
+            </label>
+            <label class="amount-label">
+              <input
+                class="amount-input"
+                type="number"
+                name="ice-coffee-amount"
+                value="0"
+                max="10"
+              />
+            </label>
+          </div>
+          <div class="checkboxes_item">
+            <label class="choose-form-label">
+              <input class="checkbox" type="checkbox" name="products" value="milkshake" />
+              <span class="choose-form-title">Milkshake</span>
+              <span class="checkbox-icon"></span>
+            </label>
+            <label class="amount-label">
+              <input
+                class="amount-input"
+                type="number"
+                name="milkshake-amount"
+                value="0"
+                max="10"
+              />
+            </label>
+          </div>
         </div>
       </div>
       <div class="signup-form_item">
