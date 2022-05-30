@@ -42,6 +42,7 @@
         height: 20px;
         text-align: center;
 
+        margin-left: auto;
         padding: 0;
         border: none;
         background-color: transparent;
@@ -80,7 +81,6 @@
 
     &__buy-button {
         display: none;
-        --animate-duration: 1.5s;
 
         @media screen and (min-width: 768px) {
             position: relative;
@@ -103,6 +103,7 @@
             border: none;
             border-radius: 22px;
 
+            --animate-duration: 1.5s;
             transition: background-color var(--slow-timing-func),
                         transform var(--fast-timing-func);
         }
