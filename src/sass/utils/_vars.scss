@@ -17,4 +17,7 @@
   --accent-background-color: #ffb8ca;
   --dark-product2-background: #f0d1a5;
   --dark-product3-background: #c2e297;
+  /* Функції переходів*/
+  --fast-timing-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --slow-timing-func: 550ms cubic-bezier(0.4, 0, 0.2, 1);
 }

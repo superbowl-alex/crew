@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
       rel="stylesheet"
     />
@@ -19,6 +23,7 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
   </head>
   <body class="body">
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
@@ -31,7 +36,6 @@
     <include src="./partials/reviews.html"></include>
     <include src="./partials/contacts.html"></include>
     <include src="./partials/footer.html"></include>
-    <include src="./partials/modal.html"></include>
     <include src="./partials/mobile-menu.html"></include>
     <include src="./partials/modal.html"></include>
 
@@ -50,8 +54,11 @@
     <!-- скрипт который добавлят класс с цветом на елемент навигации, на который нажали  -->
     <script src="../js/header-nav.js" type="module"></script>
 
+    <!-- відкривання та закривання модалки -->
     <script src="../js/modal.js"></script>
     <script src="../js/modal-about.js"></script>
+    <!-- відкривання та закривання деталей продутку -->
+    <script src="../js/products.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->

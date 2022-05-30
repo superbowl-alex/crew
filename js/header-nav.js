@@ -7,6 +7,7 @@ function doNavigationBySections(event) {
     if (event.target.nodeName !== "A") {
         return;
     }
+    
     headerNavLinksEL.forEach(el => el.classList.remove("js-current-color"));
     event.target.classList.add("js-current-color");
 }
