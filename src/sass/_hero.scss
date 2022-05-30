@@ -5,6 +5,8 @@ h1 {
 }
 
 .hero {
+  padding-top: 0;
+  padding-bottom: 0;
   background-color: var(--accent-background-color);
   overflow: hidden;
 }
@@ -29,7 +31,7 @@ p {
   $mobile-small: 320px;
   $mobile: 480px;
   $tablet: 768px;
-  $desktop: 1200px;
+  $desktop: 1280px;
 
   @if $screen == mobile-only {
     @media screen and (max-width:#{$tablet - 1}) {
@@ -93,7 +95,7 @@ p {
   @include mq(tablet) {
     max-width: 162px;
     top: 102px;
-    left: 32px;
+    left: 18px;
   }
 
   @include mq(desktop) {
@@ -172,29 +174,11 @@ p {
   justify-content: center;
   padding-right: 15px;
   padding-left: 15px;
-
-  background-color: var(--light-txt-color);
   font-family: 'DM Sans';
   font-weight: 400;
   font-size: 8px;
   line-height: 1.25;
   text-decoration: none;
-  // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-  background-color: var(--light-txt-color);
-  color: var(--title-color);
-  // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  transition: color 550ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 550ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    background-color: var(--title-color);
-    color: var(--light-txt-color);
-    transform: scale(115%);
-    box-shadow: 0px 2px 2px rgb(212, 20, 67, 0.75);
-  }
 
   @include mq(desktop) {
     min-height: 40px;
@@ -252,11 +236,16 @@ p {
 }
 
 .text__container--lg {
-  width: 114px;
-  position: absolute;
-  left: 184px;
-  bottom: 56px;
-  z-index: 3;
+  display: none;
+
+  @include mq(tablet) {
+    display: block;
+    width: 114px;
+    position: absolute;
+    left: 170px;
+    bottom: 56px;
+    z-index: 3;
+  }
 
   @include mq(desktop) {
     width: 200px;
@@ -290,16 +279,18 @@ p {
 
 .text__container {
   display: none;
+  z-index: 10;
 
   @include mq(tablet) {
     display: inline-flex;
     flex-direction: column;
     position: absolute;
-    right: 32px;
+    right: 18px;
     top: 92px;
 
     @include mq(desktop) {
       right: 16px;
+      top: 153px;
     }
   }
 }
@@ -342,6 +333,10 @@ p {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 10px;
+
+  @include mq(desktop) {
+    font-size: 24px;
+  }
 }
 
 .descr__text {
@@ -366,18 +361,6 @@ p {
 
     background-color: var(--light-txt-color);
     color: var(--title-color);
-    // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
-    transition: color 550ms cubic-bezier(0.4, 0, 0.2, 1),
-      background-color 550ms cubic-bezier(0.4, 0, 0.2, 1),
-      transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover {
-      background-color: var(--title-color);
-      color: var(--light-txt-color);
-      transform: scale(115%);
-      box-shadow: 0px 2px 2px rgb(212, 20, 67, 0.75);
-    }
   }
 
   @include mq(desktop) {
@@ -423,7 +406,7 @@ p {
   @include mq(tablet) {
     display: block;
     position: absolute;
-    right: 32px;
+    right: 18px;
     bottom: 0;
     z-index: 2;
   }
@@ -439,7 +422,7 @@ p {
   @include mq(tablet) {
     display: block;
     position: absolute;
-    left: 32px;
+    left: 18px;
     bottom: 16px;
   }
 
@@ -460,6 +443,17 @@ p {
   border-radius: 50%;
 
   background-color: var(--accent-title-color);
+  transition: transform var(--slow-timing-func), background-image var(--slow-timing-func);
+
+  &:hover {
+    transform: perspective(400px);
+
+    background-image: radial-gradient(var(--accent-background-color), var(--accent-title-color));
+    animation-name: rotateY;
+    animation-duration: 1500ms;
+    animation-iteration-count: 1;
+    animation-delay: 500ms;
+  }
 
   @include mq(tablet) {
     width: 335px;
@@ -488,5 +482,15 @@ p {
   @include mq(desktop) {
     width: 30px;
     height: 30px;
+  }
+}
+
+@keyframes rotateY {
+  0% {
+    transform: perspective(300px) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(300px) rotateY(180deg);
   }
 }
