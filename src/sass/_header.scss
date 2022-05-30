@@ -25,6 +25,7 @@
 
     &__logo-link {
         display: block;
+        --animate-duration: 1.5s;
     }
 
     &__logo-link:hover &__logo,
@@ -79,7 +80,8 @@
 
     &__buy-button {
         display: none;
-        
+        --animate-duration: 1.5s;
+
         @media screen and (min-width: 768px) {
             position: relative;
             display: block;
@@ -151,7 +153,8 @@
                     color 100ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
     }
 
-    &__nav-link:hover {
+    &__nav-link:hover,
+    &__nav-link:focus {
         color: var(--title-color);
         transform: scale(1.1);
     }
