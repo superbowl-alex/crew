@@ -394,7 +394,7 @@ p {
   animation-name: fall;
   animation-duration: 1500ms;
   animation-iteration-count: 1;
-  animation-delay: 1000ms;
+  animation-delay: 0ms;
 
   @include mq(tablet) {
     right: 39%;

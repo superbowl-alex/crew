@@ -1,32 +1,108 @@
 <section id="gallery" class="section gallery">
   <div class="container">
-   
-    <h2 class="visually-hidden">gallery</h2>
-    <picture>
-      <source
-        srcset="
-          ./images/gallery-img-desktop.jpg 1x,
-          ./images/gallery-img-desktop@2x.jpg 2x
-        "
-        media="(min-width: 1200px)"
-      />
-      <source
-        srcset="
-          ./images/gallery-img-tablet.jpg    1x,
-          ./images/gallery-img-tablet@2x.jpg 2x
-        "
-        media="(min-width: 768px)"
-      />
-      <source
-        srcset="./images/gallery-img-mob.jpg 1x, ./images/gallery-img-mob@2x.jpg 2x"
-        media="(max-width: 767px)"
-      />
-      <img
-        class="gallery__image"
-        src="./images/gallery-img-mob.jpg"
-        alt="gallery"
-      />
-    </picture>
-   
+
+    <!-- Grid -->
+
+    <ul class="galery__container">
+      <div class="galery__thumb">
+        <div class="galery__item">
+          <picture class="galery__picture">
+            <source srcset="./images/gallery-1_lg.jpg     1x,
+                            ./images/gallery-1_lg@2x.jpg     2x"                                
+                            type="image/jpg"/>
+          <img class="gallery__image" src="./images/gallery-1_lg.jpg" alt="product photo">
+          </picture>
+        </div>
+      </div>
+      <div class="galery__thumb">
+        <div class="galery__group group">
+          <div class="galery__item group__item">
+            <picture class="galery__picture">
+              <source srcset="./images/gallery-2_lg.jpg     1x,
+                              ./images/gallery-2_lg@2x.jpg  2x"                            
+                              type="image/jpg" />             
+              <img class="hero__image" src="./images/gallery-2_lg.jpg" alt="product photo">
+          </div>
+          <div class="galery__item group__item">
+            <picture>
+              <source srcset="./images/gallery-3_lg.jpg     1x,
+                              ./images/gallery-3_lg@2x.jpg  2x"                             
+                              type="image/jpg" />            
+              <img class="hero__image" src="./images/gallery-3_lg.jpg" alt="product photo">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="galery__thumb">
+        <div class="galery__group group">
+          <div class="galery__item galery__item--lg group__item">
+            <picture>
+              <source srcset="./images/gallery-4_lg.jpg     1x,
+                              ./images/gallery-4_lg@2x.jpg  2x" 
+                              type="image/jpg" />              
+              <img class="hero__image" src="./images/gallery-4_lg.jpg" alt="product photo">
+            </picture>
+          </div>
+          <div class="galery__item group__item">
+            <picture><source srcset="./images/gallery-5_lg.jpg     1x,
+                                    ./images/gallery-5_lg@2x.jpg   2x" 
+                                    type="image/jpg" />            
+            <img class="hero__image" src="./images/gallery-5_lg.jpg" alt="product photo"></picture>
+          </div>
+        </div>
+      </div>
+      <div class="galery__thumb">
+        <div class="galery__group group">
+          <div class="galery__item group__item">
+            <picture>
+              <source srcset="./images/gallery-6_lg.jpg     1x,
+                              ./images/gallery-6_lg@2x.jpg  2x" 
+                              type="image/jpg" />              
+              <img class="hero__image" src="./images/gallery-6_lg.jpg" alt="product photo">
+            </picture>
+          </div>
+          <div class="galery__item group__item">
+           <picture>
+              <source srcset="./images/gallery-7_lg.jpg     1x,
+                              ./images/gallery-7_lg@2x.jpg  2x"
+                              type="image/jpg" />              
+              <img class="hero__image" src="./images/gallery-7_lg.jpg" alt="product photo">
+           </picture>
+          </div>
+        </div>
+      </div>
+      <div class="galery__thumb">
+        <div class="galery__group group">
+          <div class="galery__item group__item">
+            <picture>
+              <source srcset="./images/gallery-8_lg.jpg     1x,
+                              ./images/gallery-8_lg@2x.jpg  2x"
+                              type="image/jpg" />              
+              <img class="hero__image" src="./images/gallery-8_lg.jpg" alt="product photo">
+            </picture>
+          </div>
+          <div class="galery__item group__item">
+            <picture>
+              <source srcset="./images/gallery-9_lg.jpg     1x,
+                              ./images/gallery-9_lg@2x.jpg  2x"
+                              type="image/jpg" />              
+              <img class="hero__image" src="./images/gallery-9_lg.jpg" alt="product photo">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="galery__thumb group">
+        <div class="galery__item group__item">
+         <picture>
+            <source srcset="./images/gallery-10_lg.jpg     1x,
+                            ./images/gallery-10_lg@2x.jpg  2x"                            
+                            type="image/jpg" />            
+            <img class="hero__image" src="./images/gallery-10_lg.jpg" alt="product photo">
+         </picture>
+        </div>
+      </div>
+    </ul>    
   </div>
 </section>
+
+
