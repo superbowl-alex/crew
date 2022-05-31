@@ -1,0 +1,213 @@
+.footer{
+    background-color: var(--secondary-light-background);
+    @media screen and (min-width:768px){
+        display: flex;
+        
+    }
+}
+.container{
+    position: relative;
+}
+.footer__titel{
+    width: 234px;
+    height: 134px;
+    @media screen and (min-width:768px){
+        width: 340px;
+        height: 179px;
+    }
+    @media screen and (min-width:1280px){
+        width: 474px;
+        height: 116px;
+    }
+   
+
+}
+.footer__titel__little{
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: #FFA5BA;
+    @media screen and (min-width:768px){
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+        
+    }
+    @media screen and (min-width:1280px){
+        font-size: 30px;
+        line-height: 34px;
+
+    }
+}
+.footer__titel__big{
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 39px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #D41443;
+    @media screen and (min-width:768px){
+        font-size: 48px;
+        line-height: 55px;
+        letter-spacing: 0.06em;
+    }
+    @media screen and (min-width:1280px){
+        font-size: 56px;
+        line-height: 66px;
+        
+    }
+}
+.footer__list{
+    display: flex; 
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 40px;
+    @media screen and (min-width:768px){
+        width: 162px;
+        position: absolute;
+        top: 5px;
+        right: 18px;
+        margin-top:0;
+    }
+    @media screen and (min-width:1280px){
+        width: 150px;
+        top: 5px;
+        right: 16px;
+        margin-top: 0;
+    }
+}
+.footer__item{
+    margin-right: 28px;
+    &:last-child{
+        margin-right: 0;
+    }
+
+}
+.footer__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: #FEA5BB;
+    transition: background-color  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover{
+        background-color:#D41443;
+    }
+    @media screen and (min-width:768px){
+        height: 34px;
+        width: 34px;
+    }
+}
+.footer__icon{
+    &__github{
+        width: 18px;
+        height: 18px;
+        fill:#fff;
+       
+    }
+    &__telegram{
+        width: 19px;
+        height: 15px;
+        fill:#fff;;
+    }
+    &__facebook{
+        width: 20px;
+        height: 225px;
+        fill:#fff;
+    }
+
+}
+.footer__text{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    color: #000000;
+    @media screen and (min-width:768px){
+        font-size: 14px;
+        line-height: 26px;
+    }
+    @media screen and (min-width:1280px){
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+    }
+}
+.footer__contat{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    color: #D41443; 
+    @media screen and (min-width:768px){
+        font-size: 14px;
+        line-height: 26px;
+    }
+    @media screen and (min-width:1280px){
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+    }
+}
+.footer__connection{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    @media screen and (min-width:768px){
+        width: 268px;
+        position: absolute;
+        top: 80px;
+        right: 18px;
+        margin-top: 0px;
+    }
+    @media screen and (min-width:1280px){
+        width: 320px;
+        height: 30px;
+        top: 80px;
+        right: 16px;
+    }
+}
+.footer__border{
+    border-top: 1px solid #E1E1E1;
+    background-color: var(--secondary-light-background);
+}
+.footer__copy{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+
+
+    text-align: center;
+    color: #907E82;
+    padding-top: 16px;
+    padding-bottom: 20px;
+    width: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width:768px){
+        line-height:26px;
+        letter-spacing: 0.02em;
+        width: 276px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+    }
+}
+
+
+
+

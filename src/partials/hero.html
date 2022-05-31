@@ -5,10 +5,10 @@
             <nav>
                 <ul class="hero__list list">
                     <li class="hero__item">
-                        <a href="#products" class="hero__link link">Products</a>
+                        <a href="#products" class="hero__link link btn__animation">Products</a>
                     </li>
                     <li class="hero__item">
-                        <a href="#about" class="hero__link link">How it&#39;s made?</a>
+                        <a href="#about" class="hero__link link btn__animation">How it&#39;s made?</a>
                     </li>
                 </ul>
             </nav>              
@@ -24,10 +24,19 @@
             
         </div>
         </div>
-        <div class="text__thumb--lg">
-            <p class="hero__text hero__text--about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et</p>
-            <button class="hero__button" type="button">        
+        <div class="text__container--lg">
+            <div class="text__thumb--lg" overflow-on>
+                <p class="hero__text hero__text--about " data-menu-hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut
+                    labore et</p>
+                    <div class="descr" data-menu>
+                        <h2 class="descr__title">Lorem ipsum</h2>
+                        <p class="descr__text hero__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ad ratione placeat quis voluptates nam tempora et aperiam, illum quo perferendis id asperiores incidunt, nulla pariatur quasi? Reiciendis dicta asperiores modi, maxime rem saepe laboriosam nemo perspiciatis laudantium sequi aperiam nulla pariatur voluptatem quidem illum officiis cumque? Adipisci assumenda voluptate facilis fugiat libero 
+                        </p>
+                    </div>
+            </div>            
+            <button class="hero__button btn__animation" type="button" aria-label="learn more button"  data-menu-button aria-expanded="false">        
             <svg class="hero__icon">        
                 <use href="./images/icons.svg#icon-arrow-right2"></use>
             </svg>
@@ -38,7 +47,7 @@
             <!-- Desktop -->
             <source srcset="./images/hero-ice-cream-desktop.png        1x,
                             ./images/hero-ice-cream-desktop@2x.png     2x"
-                            media="(min-width: 1200px)"
+                            media="(min-width: 1280px)"
                             type="image/png"/>
             <!-- Tablet -->
             <source srcset="./images/hero-ice-cream-tablet.png         1x,
@@ -58,7 +67,7 @@
             <!-- Desktop -->
             <source srcset="./images/hero-milk-desktop.png        1x,
                             ./images/hero-milk-desktop@2x.png     2x" 
-                            media="(min-width: 1200px)"
+                            media="(min-width: 1280px)"
                             type="image/png"/>
 
             <!-- Tablet -->
@@ -75,7 +84,7 @@
             <!-- Desktop -->
             <source srcset="./images/hero-girl-desktop.png        1x,
                             ./images/hero-girl-desktop@2x.png    2x" 
-                            media="(min-width: 1200px)"
+                            media="(min-width: 1280px)"
                             type="image/png" />
             <!-- Tablet -->
             <source srcset="./images/hero-girl-tablet.png         1x,
@@ -88,3 +97,5 @@
         <div class="circle"></div>
     </div>
 </section>
+
+<script src="./JS/hero.js"></script>
