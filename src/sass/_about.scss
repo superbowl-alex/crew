@@ -3,6 +3,7 @@
   padding-bottom: 0;
   @media screen and (max-width: 767.98px) {
     background-image: url(../images/about-bg-mob.png);
+    background-size: 320px 133px;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       & {
         background-image: url(../images/about-bg-mob@2x.png);
@@ -10,9 +11,6 @@
     }
     background-repeat: no-repeat;
     background-position-y: 574px;
-    @media screen and (min-width: 345px) {
-      background-position-y: 536px;
-    }
     @media screen and (min-width: 480px) {
       background-position-x: calc((100vw - 480px) / 2);
     }
@@ -23,6 +21,7 @@
   }
   @media screen and (min-width: 1280px) {
     background-image: url(../images/about-bg-desktop.png);
+    background-size: 1278px 521px;
     background-position: center top 255px;
     background-repeat: no-repeat;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -40,6 +39,11 @@
 }
 .about__title {
   margin-bottom: 32px;
+  @media screen and (max-width: 767.98px) {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   @media screen and (min-width: 768px) {
     margin-bottom: 40px;
   }
@@ -110,7 +114,7 @@
   bottom: 0;
   left: 0;
   opacity: 0;
-  transform: translate(-120%, 0);
+  transform: translate(-110%, 0);
   box-shadow: rgba(212, 20, 67, 0.75) 0px 2px 2px;
   border-radius: 22px;
   padding: 10px 5px;
@@ -152,6 +156,7 @@
   padding-left: 37px;
   border: none;
   justify-content: left;
+  transition: background-color var(--slow-timing-func);
   @media screen and (min-width: 768px) {
     margin-top: 40px;
   }
@@ -160,6 +165,7 @@
   &:hover,
   &:focus {
     background-color: var(--hover-button-background);
+    box-shadow: 0px 2px 2px rgb(86 85 85 / 75%);
   }
 }
 .about__icon {
@@ -193,4 +199,19 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.transform {
+  height: 390px;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  opacity: 1;
+  transform: translate(0, 0);
+  box-shadow: rgb(212 20 67 / 75%) 0px 2px 2px;
+  border-radius: 22px;
+  padding: 10px 5px;
+  background-color: var(--accent-title-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
