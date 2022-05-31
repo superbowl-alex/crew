@@ -3,7 +3,7 @@
   padding-bottom: 0;
   @media screen and (max-width: 767.98px) {
     background-image: url(../images/about-bg-mob.png);
-    background-size: 320px 133px;
+    background-size: 100vw 133px;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       & {
         background-image: url(../images/about-bg-mob@2x.png);
@@ -12,6 +12,7 @@
     background-repeat: no-repeat;
     background-position-y: 574px;
     @media screen and (min-width: 480px) {
+      background-size: 480px 133px;
       background-position-x: calc((100vw - 480px) / 2);
     }
   }
