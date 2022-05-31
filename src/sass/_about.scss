@@ -11,9 +11,6 @@
     }
     background-repeat: no-repeat;
     background-position-y: 574px;
-    @media screen and (min-width: 345px) {
-      background-position-y: 536px;
-    }
     @media screen and (min-width: 480px) {
       background-position-x: calc((100vw - 480px) / 2);
     }
@@ -42,6 +39,11 @@
 }
 .about__title {
   margin-bottom: 32px;
+  @media screen and (max-width: 767.98px) {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   @media screen and (min-width: 768px) {
     margin-bottom: 40px;
   }
