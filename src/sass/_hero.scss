@@ -361,6 +361,10 @@ p {
 
     background-color: var(--light-txt-color);
     color: var(--title-color);
+
+    &.is-active .hero__icon {
+      transform: rotate(90deg);
+    }
   }
 
   @include mq(desktop) {
@@ -376,6 +380,7 @@ p {
   fill: currentColor;
   width: 8px;
   height: 8px;
+  transition: transform var(--slow-timing-func);
 
   @include mq(desktop) {
     width: 10px;
