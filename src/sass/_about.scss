@@ -210,5 +210,6 @@
   border-radius: 22px;
   padding: 10px 5px;
   background-color: var(--accent-title-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
