@@ -22,13 +22,13 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 95vw;
   height: 100vh;
-  bottom: 0;
+  bottom: 50px;
   left: 50%;
   opacity: 0;
   visibility: hidden;
-  transform: translate(-50%, 100%);
+  transform: translate(-150%, 0);
   max-width: 480px;
   border-radius: 22px;
   padding: 60px 20px 20px 20px;
@@ -36,7 +36,7 @@
   box-shadow: rgba(212, 20, 67, 0.75) 0px 2px 2px;
   height: fit-content;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1), visibility250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &.contacts-modal-open {
     transform: translate(-50%, 0);
     opacity: 1;
