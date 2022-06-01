@@ -43,6 +43,12 @@
     visibility: visible;
     transform: translate(-50%, -50%);
   }
+  @media screen and (orientation: landscape) {
+    top: 50vh;
+    &.about-modal-open {
+      transform: translate(-50%, -50vh);
+    }
+  }
 }
 
 .about-modal__btn-close {
