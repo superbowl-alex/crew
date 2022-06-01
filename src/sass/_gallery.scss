@@ -8,15 +8,23 @@
 
 .galery__container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include mq(tablet) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .galery__thumb {
   &:not(:first-child) {
-    margin-left: 2px;
+    margin-top: 9px;
 
     @include mq(tablet) {
+      margin-top: 0;
       margin-left: 5px;
     }
 
@@ -26,8 +34,6 @@
   }
 
   &:nth-child(5) {
-    margin-bottom: 9px;
-
     @include mq(tablet) {
       margin-bottom: 29px;
     }
@@ -39,8 +45,8 @@
 }
 
 .galery__item {
-  width: 40px;
-  height: 40px;
+  width: 140px;
+  height: 140px;
   border-radius: 5px;
   overflow: hidden;
   transition: transform var(--slow-timing-func);
@@ -67,8 +73,8 @@
 }
 
 .galery__item--lg {
-  width: 80px;
-  height: 80px;
+  width: 140px;
+  height: 140px;
 
   @include mq(tablet) {
     width: 175px;
@@ -83,14 +89,19 @@
 
 .galery__group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+
+  @include mq(tablet) {
+    flex-direction: column;
+  }
 }
 
 .group__item {
   &:not(:first-child) {
-    margin-top: 2px;
+    margin-left: 9px;
 
     @include mq(tablet) {
+      margin-left: 0;
       margin-top: 5px;
     }
 
