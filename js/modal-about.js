@@ -1,22 +1,19 @@
-const buttonEL = document.querySelector('.about__btn');
-const headerEL = document.querySelector('header');
-const backdropEL = document.querySelector('.backdrop');
-const modalEL = document.querySelector('div[data-about-modal]');
-const bodylEL = document.querySelector('body');
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector('[data-modal-about-open]'),
+    closeModalBtn: document.querySelector('[data-modal-about-close]'),
+    header: document.querySelector('header'),
+    backdrop: document.querySelector('[data-backdrop-about]'),
+    modal: document.querySelector('[data-modal-about]'),
+  };
 
-buttonEL.addEventListener('click', openModal);
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
 
-function openModal() {
-  headerEL.classList.toggle('hidden-header');
-  backdropEL.classList.toggle('backdrop--hidden');
-
-  modalEL.classList.toggle('transform');
-  modalEL.classList.toggle('about__modal');
-  bodylEL.classList.toggle('modal-open');
-
-  if (modalEL.classList.contains('transform')) {
-    buttonEL.firstElementChild.textContent = 'Close';
-  } else {
-    buttonEL.firstElementChild.textContent = 'Read more';
+  function toggleModal() {
+    document.body.classList.toggle('modal-open');
+    refs.modal.classList.toggle('about-modal-open');
+    refs.backdrop.classList.toggle('about-backdrop--hidden');
+    refs.header.classList.toggle('hidden-header');
   }
-}
+})();

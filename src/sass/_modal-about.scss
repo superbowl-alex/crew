@@ -1,0 +1,80 @@
+.about-backdrop {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(243, 243, 233, 0.5);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--fast-timing-func), visibility var(--fast-timing-func);
+}
+
+.about-backdrop--hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.about-modal {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 97vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+  max-width: 460px;
+  border-radius: 22px;
+  padding: 60px 20px;
+  background-color: var(--accent-background-color);
+  box-shadow: rgba(212, 20, 67, 0.75) 0px 2px 2px;
+  height: fit-content;
+  transition: transform var(--fast-timing-func), opacity var(--fast-timing-func),
+    visibility var(--fast-timing-func);
+
+  &.about-modal-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.about-modal__btn-close {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+}
+
+.about-modal__icon {
+  fill: var(--light-txt-color);
+  transition: fill var(--fast-timing-func);
+
+  &:hover,
+  &:focus {
+    fill: var(--title-color);
+  }
+}
+.about-modal__title {
+  color: var(--title-color);
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 0.965;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.about-modal__text {
+  color: var(--light-txt-color);
+}
