@@ -1,5 +1,5 @@
-const headerNavEL = document.querySelector(".mobile-menu-list");
-const headerNavLinksEL = document.querySelectorAll(".mobile-menu-link");
+const headerNavEL = document.querySelector(".mobile-menu__list");
+const headerNavLinksEL = document.querySelectorAll(".mobile-menu__link");
 
 headerNavEL.addEventListener("click", doNavigationBySections);
 
@@ -8,6 +8,6 @@ function doNavigationBySections(event) {
         return;
     }
     
-    headerNavLinksEL.forEach(el => el.classList.remove("mobile-menu-link-color"));
-    event.target.classList.add("mobile-menu-link-color");
+    headerNavLinksEL.forEach(el => el.classList.remove("mobile-menu__link-color"));
+    event.target.classList.add("mobile-menu__link-color");
 }

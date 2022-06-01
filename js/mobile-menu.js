@@ -1,4 +1,4 @@
-const mobileMenuItemsEL = document.querySelector(".mobile-menu-list");
+const mobileMenuItemsEL = document.querySelector(".mobile-menu__list");
 const mobileMenuEL = document.querySelector(".backdrop-mobile");
 const openMenuBtn = document.querySelector(".menu-btn-open");
 const closeMenuBtn = document.querySelector(".mobile-btn-close");
