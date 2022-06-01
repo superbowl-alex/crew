@@ -1,0 +1,47 @@
+<div class="contacts-backdrop contacts-backdrop--hidden" data-backdrop-contacts>
+  <div class="contacts-modal" data-modal-contacts>
+    <button class="contacts-modal__btn-close" type="button" data-modal-contacts-close>
+      <svg class="contacts-modal__icon" width="40px" height="40px">
+        <use href="images/icons.svg#icon-close_40px"></use>
+      </svg>
+    </button>
+    <p class="contacts-modal__title">Do you want to start a successful business?</p>
+    <p class="contacts-modal__subtitle">Then let's do it together!</p>
+    <form name="contacts-form" class="contacts-form" autocomplete="off">
+      <div class="contacts-form__item">
+        <label class="contacts-form__label">
+          <span class="contacts-form__title">Your name</span>
+          <input
+            class="contacts-form__input"
+            type="text"
+            name="name"
+            autofocus
+            placeholder="Chuck Rassel"
+          />
+        </label>
+      </div>
+      <div class="contacts-form__item">
+        <label class="contacts-form__label">
+          <span class="contacts-form__title">Your email adress</span>
+          <input
+            class="contacts-form__input"
+            type="email"
+            name="email"
+            placeholder="adress@mail.com"
+          />
+        </label>
+      </div>
+      <div class="contacts-form__item">
+        <label class="contacts-form__label-textarea">
+          <span class="contacts-form__title">What else would you like to know?</span>
+          <textarea
+            class="contacts-form__textarea"
+            name="comments"
+            placeholder="Please enter text..."
+          ></textarea>
+        </label>
+      </div>
+      <button class="contacts-form__submit-btn" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
