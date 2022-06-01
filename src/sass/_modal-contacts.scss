@@ -8,8 +8,7 @@
   background-color: rgba(243, 243, 233, 0.5);
   opacity: 1;
   visibility: visible;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--fast-timing-func), visibility var(--fast-timing-func);
 }
 
 .contacts-backdrop--hidden {
@@ -20,42 +19,28 @@
 
 .contacts-modal {
   position: absolute;
+  opacity: 0;
+  visibility: hidden;
   display: flex;
   flex-direction: column;
   width: 95vw;
   height: 100vh;
-  bottom: 50px;
+  top: 50%;
   left: 50%;
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(-150%, 0);
+  transform: translate(0, -50%);
   max-width: 480px;
   border-radius: 22px;
   padding: 60px 20px 20px 20px;
   background-color: var(--accent-background-color);
   box-shadow: rgba(212, 20, 67, 0.75) 0px 2px 2px;
   height: fit-content;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--fast-timing-func), opacity var(--fast-timing-func),
+    visibility var(--fast-timing-func);
   &.contacts-modal-open {
-    transform: translate(-50%, 0);
     opacity: 1;
     visibility: visible;
+    transform: translate(-50%, -50%);
   }
-}
-.transform {
-  height: 390px;
-  bottom: 0;
-  position: absolute;
-  left: 0;
-  opacity: 1;
-  transform: translate(0, 0);
-  box-shadow: rgb(212 20 67 / 75%) 0px 2px 2px;
-  border-radius: 22px;
-  padding: 10px 5px;
-  background-color: var(--accent-title-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-modal__btn-close {
@@ -69,7 +54,7 @@
 
 .contacts-modal__icon {
   fill: var(--light-txt-color);
-  transition: fill 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--fast-timing-func);
 
   &:hover,
   &:focus {
