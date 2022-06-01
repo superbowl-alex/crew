@@ -35,7 +35,7 @@
     text-align: center;
     display: block;
     margin: 0 auto;
-    background-color: #fafafa;
+    background-color:var(--light-review-background);
     padding: 43px 50px 10px;
     margin-bottom: 16px;
     @media screen and (min-width: 768px) {
@@ -147,8 +147,6 @@ left: 105px;
 
 }
 
-
-
 // "SWIPER STYLES"
 
 .swiper {
@@ -172,8 +170,6 @@ left: 105px;
 .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
-    background: grey;
-    
 }
 
 .swiper-horizontal>.swiper-pagination-bullets,
@@ -189,8 +185,6 @@ left: 105px;
     z-index: 2;
 
 }
-
-
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-image: url(../images/home-image.png);
