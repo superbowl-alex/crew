@@ -16,7 +16,7 @@
      
      window.addEventListener("scroll", CloseHeroModal) 
      function CloseHeroModal() {
-         if (window.scrollY ==400) {
+         if (window.scrollY >=400) {
              modalwin.classList.remove("is-open");
              herotxthid.classList.remove("is-hidden");
              txtovrfl.classList.remove("overflow-on");
