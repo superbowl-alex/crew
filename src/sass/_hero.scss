@@ -153,15 +153,19 @@ p {
 
 .hero__item:not(:last-child) {
   margin-right: 8px;
+
+  @include mq(desktop) {
+    margin-right: 12px;
+  }
 }
 
 .hero__item {
   @include mq(desktop) {
     &:nth-child(1) {
-      width: 107px;
+      min-width: 107px;
     }
     &:nth-child(2) {
-      width: 138px;
+      min-width: 138px;
     }
   }
 }
@@ -228,11 +232,6 @@ p {
 .hero__text--about {
   line-height: 1.5;
   text-align: left;
-  transition: opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &.is-open {
-    opacity: 0;
-  }
 }
 
 .text__container--lg {
@@ -258,10 +257,6 @@ p {
   position: relative;
   overflow: hidden;
   margin-bottom: 7px;
-
-  &.overflow-on {
-    overflow: visible;
-  }
 
   @include mq(desktop) {
     margin-bottom: 20px;
@@ -298,28 +293,19 @@ p {
 // Description
 
 .descr {
-  display: none;
+  display: block;
 
-  @include mq(tablet) {
-    display: block;
-    background-color: var(--accent-title-color);
-    opacity: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-radius: 15px;
-    padding: 10px 5px;
-    transform: translate(0, 100%);
-    box-shadow: 0px 2px 2px rgb(212, 20, 67, 0.75);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &.is-open {
-      transform: translate(0, 0);
-      opacity: 1;
-      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-  }
+  display: block;
+  max-width: 480px;
+  background-color: var(--accent-title-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 15px;
+  padding: 10px 20px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 2px rgb(212, 20, 67, 0.75);
+  transition: opacity var(--fast-timing-func);
 }
 
 .descr__title {
@@ -340,7 +326,50 @@ p {
 }
 
 .descr__text {
+  display: block;
   text-align: left;
+  font-size: 10px;
+  line-height: 1.2;
+  color: var(--light-txt-color);
+
+  @include mq(tablet) {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  @include mq(desktop) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.descr__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+
+// Modal
+
+.hero__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  overflow-y: scroll;
+  z-index: 10000;
+  transform: scale(1);
+  transition: transform var(--fast-timing-func), opacity var(--fast-timing-func);
+
+  &.is-hidden .descr {
+    opacity: 0;
+    scale: (0.3);
+  }
 }
 
 // Button
@@ -361,10 +390,6 @@ p {
 
     background-color: var(--light-txt-color);
     color: var(--title-color);
-
-    &.is-active .hero__icon {
-      transform: rotate(90deg);
-    }
   }
 
   @include mq(desktop) {
@@ -457,7 +482,6 @@ p {
 
   &:hover {
     transform: perspective(400px);
-
     background-image: radial-gradient(var(--accent-background-color), var(--accent-title-color));
     animation-name: rotateY;
     animation-duration: 1500ms;
@@ -486,7 +510,6 @@ p {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-
   background-color: var(--light-txt-color);
 
   @include mq(desktop) {

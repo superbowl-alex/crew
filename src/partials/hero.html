@@ -25,17 +25,11 @@
         </div>
         </div>
         <div class="text__container--lg">
-            <div class="text__thumb--lg" overflow-on>
-                <p class="hero__text hero__text--about " data-menu-hidden>let's work together! We are ready to start cooperation right now! Creative solutions for your business are born here!</p>
-                    <div class="descr" data-menu>
-                        <h2 class="descr__title">Crew Team</h2>
-                        <p class="descr__text hero__text">
-                            The best team of developers that can solve problems of varying complexity in the shortest possible time. We work for a result that will satisfy any requirements of the consumer.
-                            The secret of our success is a team approach to solving problems, mutual respect and harmony in the team, the desire to achieve a common goal - to become better every day!
-                        </p>
-                    </div>
+            <div class="text__thumb--lg">
+                <p class="hero__text hero__text--about ">let's work together! We are ready to start cooperation right now! Creative solutions for your business are born here!</p>
+                    
             </div>            
-            <button class="hero__button btn__animation" type="button" aria-label="learn more button"  data-menu-button aria-expanded="false">        
+            <button class="hero__button btn__animation" type="button" aria-label="learn more button"  hero-btn-open aria-expanded="false">        
             <svg class="hero__icon">        
                 <use href="./images/icons.svg#icon-arrow-right2"></use>
             </svg>
@@ -96,5 +90,21 @@
         <div class="circle"></div>
     </div>
 </section>
+<div class="hero__backdrop is-hidden" hero-modal>
+    <div class="descr">
+        <button class="descr__btn" type="button" hero-btn-close>
+            <svg class="modal-close" width="25px" height="25px">
+                <use href="images/icons.svg#icon-close_40px"></use>
+            </svg>
+        </button>
+        <h2 class="descr__title">Crew Team</h2>
+        <p class="descr__text hero__text">
+            The best team of developers that can solve problems of varying complexity in the shortest possible time. We work
+            for a result that will satisfy any requirements of the consumer.
+            The secret of our success is a team approach to solving problems, mutual respect and harmony in the team, the
+            desire to achieve a common goal - to become better every day!
+        </p>
+    </div>
+</div>
 
-<script src="./JS/hero.js"></script>
+<script src="../js/hero.js"></script>
