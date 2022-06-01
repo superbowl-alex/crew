@@ -12,7 +12,7 @@
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.backdrop.classList.toggle('backdrop--hidden');
+    refs.backdrop.classList.toggle('contacts-backdrop--hidden');
     refs.modal.classList.toggle('contacts-modal-open');
     refs.header.classList.toggle('hidden-header');
     refs.body.classList.toggle('modal-open');
