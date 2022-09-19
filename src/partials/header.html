@@ -1,6 +1,9 @@
 <header class="header">
   <div class="header__wrapper container">
-    <a class="header__logo-link animate__animated animate__lightSpeedInLeft  animate__delay-0.5s" href="#">
+    <a
+      class="header__logo-link animate__animated animate__lightSpeedInLeft animate__delay-0.5s"
+      href="#"
+    >
       <img
         class="header__logo"
         srcset="images/logo.png 1x, images/logo@2x.png 2x"
@@ -8,25 +11,27 @@
         alt="logo"
       />
     </a>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item">
-                    <a class="header__nav-link js-current-color" href="#" data-color>Home</a>
-                </li>
-                <li class="header__nav-item">
-                    <a class="header__nav-link" href="#about-us">About us</a>
-                </li>
-                <li class="header__nav-item">
-                    <a class="header__nav-link" href="#about">How it’s made?</a>
-                </li>
-                <li class="header__nav-item">
-                    <a class="header__nav-link" href="#products">Our products</a>
-                </li>
-                <li class="header__nav-item">
-                    <a class="header__nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a data-goto="#hero" class="header__nav-link js-current-color" href="#" data-color
+            >Home</a
+          >
+        </li>
+        <li class="header__nav-item">
+          <a data-goto="#about-us" class="header__nav-link" href="#about-us">About us</a>
+        </li>
+        <li class="header__nav-item">
+          <a data-goto="#about" class="header__nav-link" href="#about">How it’s made?</a>
+        </li>
+        <li class="header__nav-item">
+          <a data-goto="#products" class="header__nav-link" href="#products">Our products</a>
+        </li>
+        <li class="header__nav-item">
+          <a data-goto="#contact" class="header__nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
     <button class="header__button menu-btn-open" type="button">
       <div>
         <span class="header__button-line"></span>
@@ -35,7 +40,7 @@
       </div>
     </button>
 
-    <span class="animate__animated animate__lightSpeedInRight  animate__delay-0.5s">
+    <span class="animate__animated animate__lightSpeedInRight animate__delay-0.5s">
       <button class="header__buy-button" type="button">
         <span class="header__btn-text">Buy now</span>
         <svg class="header__btn-icon" width="13.3">
