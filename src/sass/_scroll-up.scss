@@ -1,10 +1,10 @@
 .scroll-up {
     position: fixed;
-    right: 50px;
+    right: 20px;
     bottom: 50px;
     z-index: 1000;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     color: #dcdcdc;
     cursor: pointer;
     visibility: hidden;
@@ -13,6 +13,10 @@
     opacity: 0;
     transition: .2s;
     transform: translateY(25px);
+    
+    @media screen and (min-width: 1280px) {
+            right: 50px;
+        }
 }
 
 .scroll-up::before {
@@ -24,7 +28,7 @@
     justify-content: center;
     height: 100%;
     width: 100%;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 500;
     content: "\21E7";
 }
