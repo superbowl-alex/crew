@@ -1,5 +1,5 @@
 const menuLinks = document.querySelectorAll(
-  '.header__nav-link[data-goto], .mobile-menu__link[data-goto]',
+  '.header__nav-link[data-goto], .mobile-menu__link[data-goto], .hero__link[data-goto]',
 );
 if (menuLinks.length > 0) {
   menuLinks.forEach(menuLink => {
